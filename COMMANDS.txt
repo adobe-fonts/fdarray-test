@@ -1,0 +1,23 @@
+# Command lines for building FDArray Test
+#
+# Version 2015-10-15
+#
+# The following AFDKO "makeotf" command line builds the OpenType/CFF
+# font in the "257" directory:
+
+makeotf -f cidfont.ps -ff features -fi cidfontinfo -mf FontMenuNameDB -r -ch UniFDArrayTest257-UTF32-H
+
+# The following AFDKO "makeotf" command line builds the OpenType/CFF
+# font in the "65535" directory:
+
+makeotf -f cidfont.ps -ff features -fi cidfontinfo -mf FontMenuNameDB -r -ch UniFDArrayTest65535-UTF32-H
+
+# To add the "stub" 'DSIG' table, and to nuke the 'VORG', 'vhea', and
+# 'vmtx' tables, the following AFDKO command lines are used:
+
+sfntedit -a DSIG=DSIG.bin -d VORG,vhea,vmtx FDArrayTest257.otf
+sfntedit -a DSIG=DSIG.bin -d VORG,vhea,vmtx FDArrayTest65535.otf
+sfntedit -f FDArrayTest257.otf
+sfntedit -f FDArrayTest65535.otf
+
+# EOF
