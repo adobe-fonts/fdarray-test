@@ -28,4 +28,5 @@ In this repository, all necessary files are in place for building the OpenType/C
 
 ## Getting Involved
 
-Send suggestions for changes to the FDArray Test project maintainer, [Dr. Ken Lunde](mailto:lunde@adobe.com?subject=[GitHub]%20FDArray%20Test), for consideration.
+For any suggestions for changes, please [create a new issue](https://github.com/adobe-fonts/fdarray-test/issues) for consideration.
+
